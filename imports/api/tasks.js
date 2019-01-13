@@ -36,8 +36,6 @@ Meteor.methods({
         check(taskId, String);
 
         const task = Tasks.findOne(taskId);
-console.log('task', task)
-console.log('Meteor.userId()', Meteor.userId())
 
         if (task.private && task.owner != Meteor.userId() || !Meteor.userId()) {
             throw new Meteor.Error('not-authorized user');
@@ -73,3 +71,4 @@ console.log('Meteor.userId()', Meteor.userId())
     }, 
 })
 
+    console.log('Meteor.methods', Meteor.methods)
