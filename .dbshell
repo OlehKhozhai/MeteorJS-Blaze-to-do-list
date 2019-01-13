@@ -1,0 +1,8 @@
+show dbs
+db.tasks.insert({"text":"This is text 1"})
+show dbs
+use tasks
+show collection
+show collections
+show collection
+db.tasks.find()
